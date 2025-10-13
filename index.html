@@ -1,1 +1,104 @@
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me — 3 Interesting Things</title>
+  <style>
+    :root { --maxw: 900px; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;      /* Centers the whole page content */
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: #222;
+      background: #f7f7fb;
+    }
+    .page {
+      width: min(100% - 2rem, var(--maxw));
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      text-align: center;       /* Centers text inside the page */
+    }
+    h1 {
+      margin: 0 0 .5rem;
+      font-size: clamp(1.5rem, 2.5vw + .5rem, 2.25rem);
+    }
+    p.lead {
+      margin: 0 auto 2rem;
+      max-width: 60ch;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    figure {
+      margin: 0;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fafafa;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    figcaption {
+      padding: .75rem 1rem;
+      font-weight: 600;
+    }
+    .small {
+      display: block;
+      font-weight: 400;
+      color: #555;
+      margin-top: .25rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="page" role="main">
+    <h1>Three Interesting Things About Me</h1>
+    <p class="lead">
+      Hi! I’m <strong>Your Name</strong>. Below are three quick snapshots that show what I enjoy
+      and what makes me, me. Swap the text and images with your own to personalize this page.
+    </p>
 
+    <section class="grid" aria-label="Three interesting things">
+      <figure>
+        <img src="https://picsum.photos/seed/travel/800/600" alt="Scenic landscape representing my love for travel." />
+        <figcaption>
+          World Explorer
+          <span class="small">I’ve visited 12 countries and love learning phrases in each language.</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://picsum.photos/seed/music/800/600" alt="Close-up of musical instruments symbolizing my music hobby." />
+        <figcaption>
+          Music Maker
+          <span class="small">I produce beats on weekends and play keys in a local jam group.</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://picsum.photos/seed/coding/800/600" alt="Laptop with code on screen representing my interest in coding." />
+        <figcaption>
+          Code Enthusiast
+          <span class="small">I’m building small apps to automate everyday tasks.</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
